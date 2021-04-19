@@ -6,11 +6,11 @@ import static step2.domain.LadderType.RIGHT;
 
 public interface LineStrategy {
 
-    LadderType firstPoint();
+    LadderType next();
 
     LadderType next(LadderType prev);
 
-    default LadderType last(LadderType prev){
+    default LadderType last(LadderType prev) {
         if (prev == RIGHT) {
             return LEFT;
         }
